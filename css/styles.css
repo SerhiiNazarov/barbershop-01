@@ -180,6 +180,8 @@ section {
   text-transform: uppercase;
 }
 
+/* hero */
+
 .hero .container {
   display: flex;
 }
@@ -231,6 +233,8 @@ section {
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
+
+/* about */
 
 .about {
   padding-top: 169px;
@@ -308,12 +312,16 @@ section {
 
 .services-list {
   padding: 30px 40px;
-  min-width: 585px;
+  flex-grow: 1;
 }
 .services-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: var(--typical-margin);
+}
+
+.services-item :last-child {
+  margin-bottom: 0;
 }
 
 .services-content {
@@ -340,17 +348,28 @@ section {
 }
 
 .responds-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .responds-item {
-  margin-bottom: 30px;
   width: 170px;
   height: 133px;
   padding: 20px 24px;
   border: 1px solid #000;
 }
 
+.responds-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.responds-item:nth-child(even) {
+  margin-top: 30px;
+}
+
 .responds-item-count {
-  margin-bottom: ;
+  display: block;
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -410,8 +429,6 @@ section {
   display: flex;
   margin-left: -30px;
 }
-.masters-item {
-}
 
 .masters-item {
   flex-basis: calc(100% / 3 -30px);
@@ -448,8 +465,7 @@ section {
   margin-bottom: 44px;
   color: var(--second-title-color);
 }
-.examples-title {
-}
+
 .examples-list {
   display: flex;
   margin-left: -30px;
@@ -459,11 +475,25 @@ section {
   margin-left: 30px;
 }
 
+/* note contacts */
+
+.note-contacts {
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 /* note */
 
 .note {
-  padding-top: 130px;
-  padding-bottom: 193px;
+  width: 600px;
+}
+.note .container {
+  width: 575px;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 .note-title {
@@ -474,18 +504,22 @@ section {
 /* contacts */
 
 .contacts {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  width: 600px;
+}
+
+.contacts .container {
+  width: 575px;
+  padding-left: 100px;
+  padding-right: 55px;
 }
 
 .contacts-title {
   margin-bottom: 40px;
   color: var(--main-title-color);
 }
-.contacts-address {
-}
+
 .address-list {
-  margin-bottom: var(--typical-margin);
+  margin-bottom: 70px;
 }
 
 .address-link {
@@ -521,6 +555,12 @@ section {
   padding-bottom: 55px;
 }
 
+.footer .container {
+  display: flex;
+  height: 127px;
+  align-items: center;
+}
+
 .footer-title {
   color: var(--third-title-color);
 
@@ -532,4 +572,14 @@ section {
 
 .footer-list {
   display: flex;
+  margin-left: auto;
+}
+
+.footer-item + .footer-item {
+  margin-left: 40px;
+}
+
+.hero-link-footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
 }
