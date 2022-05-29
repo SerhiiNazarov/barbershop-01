@@ -431,11 +431,15 @@ section {
 }
 
 .masters-item {
-  width: calc(100% / 3 -30px);
+  width: calc((100%-60px) / 3);
   margin-left: 30px;
 }
 
 .masters-content {
+  padding-top: 30px;
+  padding-left: 82px;
+  padding-right: 82px;
+  padding-bottom: 0;
 }
 
 .masters-name {
@@ -460,6 +464,19 @@ section {
 
 .masters-list-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.masters-links {
+  display: flex;
+  padding: 12px;
+  background-color: var(--main-title-color);
+  border-radius: 50%;
+}
+
+.masters-links-item + .masters-links-item {
+  margin-left: 10px;
 }
 
 /* examples */
@@ -478,7 +495,7 @@ section {
   margin-left: -30px;
 }
 .examples-item {
-  width: calc(100% / 4 -30px);
+  width: calc((100%-90px) / 4);
   margin-left: 30px;
 }
 
