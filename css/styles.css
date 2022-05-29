@@ -132,6 +132,11 @@ section {
   margin-right: 40px;
 }
 
+.header-item {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
 .header-link {
   color: var(--main-title-color);
 
@@ -148,6 +153,8 @@ section {
 
 .header-tel {
   margin-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   color: var(--main-title-color);
 
