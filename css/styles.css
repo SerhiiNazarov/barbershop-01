@@ -205,6 +205,7 @@ section {
 }
 
 .hero-content {
+  background-color: var(--second-title-color);
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.2),
       rgba(25, 28, 38, 0.2)
@@ -299,12 +300,11 @@ section {
 /* services */
 
 .services {
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
-}
-
-.services .container {
-  background-image: url("../images/servises-bg.jpg");
+  background-image: url("../images/servisces-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -482,6 +482,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+}
+
+.masters-links-item + .masters-links-item {
+  margin-left: 10px;
 }
 
 .masters-links {
@@ -489,19 +494,16 @@ section {
   padding: 12px;
   background-color: var(--main-title-color);
   border-radius: 50%;
-}
-
-.masters-links-item + .masters-links-item {
-  margin-left: 10px;
+  color: var(--second-title-color);
 }
 
 .masters-soc-icons {
-  fill: var(--second-title-color);
+  fill: currentColor;
 }
 
-.masters-links:hover .masters-soc-icons,
-.masters-links:focus .masters-soc-icons {
-  fill: var(--accent-color);
+.masters-links:hover,
+.masters-links:focus {
+  color: var(--accent-color);
 }
 
 /* examples */
@@ -527,22 +529,26 @@ section {
 /* note contacts */
 
 .note-contacts {
+  max-width: 1280px;
   display: flex;
   justify-content: center;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  margin: 0 auto;
+  background-color: #191c26;
 }
 
 /* note */
 
 .note {
-  width: 600px;
+  width: 640px;
+  padding-top: 130px;
+  padding-right: 40px;
+  padding-bottom: 192px;
+  padding-left: 50px;
 }
 .note .container {
-  width: 575px;
-  margin: 0 auto;
-  padding-left: 0;
-  padding-right: 40px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .note-title {
@@ -553,13 +559,21 @@ section {
 /* contacts */
 
 .contacts {
-  width: 600px;
+  width: 640px;
+  padding-top: 130px;
+  padding-right: 100px;
+  padding-bottom: 130px;
+  padding-left: 100px;
+  background-image: url("../images/contacts-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contacts .container {
-  width: 575px;
-  padding-left: 100px;
-  padding-right: 55px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .contacts-title {
