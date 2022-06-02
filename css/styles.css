@@ -66,7 +66,6 @@ img {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: darkolivegreen;
 }
 
 section {
@@ -96,7 +95,7 @@ section {
   width: 60px;
   height: 1px;
   background-color: currentColor;
-  margin-right: 12px;
+  margin-right: 21px;
 }
 
 .title {
@@ -340,6 +339,15 @@ section {
   padding: 30px 40px;
   flex-grow: 1;
 }
+
+.services-list-light {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-list-dark {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .services-item {
   display: flex;
   justify-content: space-between;
@@ -397,7 +405,7 @@ section {
   width: 170px;
   height: 133px;
   padding: 20px 24px;
-  border: 1px solid #000;
+  background-color: #f7f7f7;
 }
 
 .responds-item:nth-child(odd) {
@@ -427,7 +435,7 @@ section {
   font-size: 16px;
   line-height: 1.38;
   text-align: center;
-  color: #ff6c00;
+  color: var(--accent-color);
 }
 
 .responds-text {
@@ -463,8 +471,11 @@ section {
 /* masters */
 
 .masters {
+  max-width: 1280px;
   padding-top: 130px;
   padding-bottom: 130px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
 }
 
 .masters-pre-title {
@@ -569,21 +580,23 @@ section {
   justify-content: center;
   margin: 0 auto;
   background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px);
+  margin: 0 auto;
+}
+
+.note-contacts .container {
+  display: flex;
 }
 
 /* note */
 
 .note {
-  width: 640px;
+  width: calc(50% + 15px);
   padding-top: 130px;
-  padding-right: 40px;
-  padding-bottom: 192px;
-  padding-left: 50px;
-}
-.note .container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 130px;
 }
 
 .note-title {
@@ -594,21 +607,10 @@ section {
 /* contacts */
 
 .contacts {
-  width: 640px;
+  width: calc(50% - 15px);
   padding-top: 130px;
-  padding-right: 100px;
-  padding-bottom: 130px;
   padding-left: 100px;
-  background-image: url("../images/contacts-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.contacts .container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 130px;
 }
 
 .contacts-title {
@@ -632,6 +634,45 @@ section {
 
 .address-item {
   margin-bottom: var(--typical-margin);
+}
+
+.map-pin {
+  display: flex;
+  align-items: baseline;
+}
+
+.map-pin::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../images/map-pin.svg);
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+
+.phone::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../images/phone.svg);
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+}
+
+.mail::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-image: url(../images/mail.svg);
 }
 
 .contacts-text {
