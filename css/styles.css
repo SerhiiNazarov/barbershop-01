@@ -45,6 +45,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .list {
   text-decoration: underline;
 }
@@ -69,7 +70,6 @@ body {
 }
 
 section {
-  outline: 1px solid black;
 }
 
 .container {
@@ -77,7 +77,6 @@ section {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
 }
 
 .top-text {
@@ -110,6 +109,8 @@ section {
 /* header */
 
 .header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -121,9 +122,16 @@ section {
 
 .heder-logo {
   margin-right: 70px;
+  color: var(--second-title-color);
 }
 
-.header-nav {
+.header__icon {
+  fill: currentColor;
+  transition: color 300ms linear;
+}
+
+.heder-logo:hover .header__icon {
+  color: var(--accent-color);
 }
 
 .header-list {
@@ -148,11 +156,14 @@ section {
 
 .header-link {
   color: var(--main-title-color);
+  padding: 18px 0;
 
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
+  transition: color 300ms linear;
 }
 
 .header-link:hover,
@@ -171,6 +182,13 @@ section {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
+  transition: color 300ms linear;
+}
+
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
 }
 
 .button {
@@ -178,6 +196,7 @@ section {
   min-width: 160px;
   height: 40px;
   color: var(--main-btn-color);
+  background-color: transparent;
   border: 1px solid var(--accent-color);
   border-radius: 25px;
 
@@ -187,6 +206,13 @@ section {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
+  transition: background-color 300ms linear;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color);
 }
 
 /* hero */
@@ -195,17 +221,42 @@ section {
   display: flex;
 }
 
-.hero-list {
+.hero-soc {
+  display: flex;
   width: 90px;
+  align-items: flex-end;
+  padding-left: 22px;
+  padding-bottom: 33px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--second-title-color);
+  margin-right: 40px;
+}
+
+.hero-item + .hero-item {
+  margin-left: 40px;
 }
 
 .hero-link {
   color: var(--second-title-color);
 
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  transition: color 300ms linear;
 }
 
 .hero-link:hover,
@@ -541,6 +592,8 @@ section {
   background-color: var(--main-title-color);
   border-radius: 50%;
   color: var(--second-title-color);
+
+  transition: color 300ms linear;
 }
 
 .masters-soc-icons {
@@ -630,6 +683,13 @@ section {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
+
+  transition: color 300ms linear;
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--accent-color);
 }
 
 .address-item {
@@ -656,6 +716,7 @@ section {
 
 .phone::before {
   content: "";
+  color: currentColor;
   width: 24px;
   height: 24px;
   margin-right: 16px;
@@ -721,4 +782,78 @@ section {
 .hero-link-footer {
   padding-top: 57px;
   padding-bottom: 55px;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 27, 37, 0.475);
+  opacity: 1;
+
+  transition: opacity 300ms linear, visibility 300ms linear;
+  position: fixed;
+  top: 0;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  width: 500px;
+  min-height: 600px;
+  background-color: var(--main-title-color);
+  border-radius: 5px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+}
+
+.modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  color: var(--third-text-color);
+  border: 1px solid var(--third-text-color);
+  border-radius: 50%;
+  background-color: transparent;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: border 300ms linear;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal-close-icon {
+  fill: currentColor;
+
+  transition: color 300ms linear;
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  color: var(--accent-color);
 }
