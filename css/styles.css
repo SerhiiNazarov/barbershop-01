@@ -657,6 +657,92 @@ section {
   color: var(--main-title-color);
 }
 
+/* online-form */
+
+.online-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 40px;
+}
+
+.online-form__field {
+  position: relative;
+  width: 265px;
+  margin-bottom: 44px;
+}
+
+.online-form__input {
+  width: 100%;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  transition: border-color 300ms linear;
+}
+
+.online-form__input:hover,
+.online-form__input:focus {
+  border-color: #ffffff;
+}
+
+.online-form__input:hover + .online-form__label,
+.online-form__input:focus + .online-form__label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+
+.online-form__input:not(:placeholder-shown) + .online-form__label {
+  color: #ffffff;
+  transform: translateY(-100%);
+}
+
+.online-form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+
+  transition: transform 300ms linear, color 300ms linear;
+}
+
+.text__field {
+  position: relative;
+  width: 100%;
+}
+
+.online-form__textarea {
+  width: 100%;
+  height: 76px;
+  margin-top: 13px;
+  margin-bottom: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  transition: border-color 300ms linear;
+  resize: none;
+}
+
+.online-form__textarea:hover,
+.online-form__textarea:focus {
+  border-color: #ffffff;
+}
+
+.online-form__textarea:hover + .online-form__label,
+.online-form__textarea:focus + .online-form__label {
+  color: #ffffff;
+}
+
 /* contacts */
 
 .contacts {
@@ -808,6 +894,7 @@ section {
 .modal {
   width: 500px;
   min-height: 600px;
+  padding: 40px;
   background-color: var(--main-title-color);
   border-radius: 5px;
 
@@ -856,4 +943,139 @@ section {
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   color: var(--accent-color);
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field:hover .form-icon,
+.form-field:focus .form-icon {
+  fill: var(--accent-color);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding-left: 30px;
+  color: var(--third-text-color);
+  outline: none;
+
+  transition: border-color 300ms linear;
+}
+
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.form-input:not(:placeholder-shown):not(:focus):valid {
+  border-color: rgba(85, 83, 215, 0.792);
+}
+
+.form-input:not(:placeholder-shown):not(:focus):invalid {
+  background-color: rgba(201, 100, 38, 0.792);
+}
+
+.form-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+}
+
+.form-input::placeholder {
+  color: var(--third-text-color);
+  font-size: 12px;
+}
+
+.form-text::placeholder {
+  color: var(--third-text-color);
+  font-size: 12px;
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  color: var(--second-title-color);
+  margin-bottom: 5px;
+}
+
+/* .form-text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  resize: none;
+  padding: 10px;
+  outline: none;
+} */
+
+.form-text:hover,
+.form-text:focus {
+  border-color: var(--accent-color);
+}
+
+.check-text {
+  display: flex;
+  position: relative;
+  color: var(--second-title-color);
+  font-size: 14px;
+}
+
+.check-text::before {
+  content: "";
+  width: 30px;
+  height: 18px;
+  border: 1px solid #090b13;
+  border-radius: 50px;
+  margin-right: 10px;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  transition: background-color 300ms linear;
+}
+
+.check-text::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 14px;
+  border: 1px solid #090b13;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  left: 2px;
+  top: 2px;
+
+  transition: transform 300ms linear;
+}
+
+.form-check:checked + .check-text::after {
+  transform: translate(12px);
+}
+
+.form-check:checked + .check-text::before {
+  background-color: rgba(85, 83, 215, 0.792);
+}
+
+.form-check:hover + .check-text::before {
+  border: 1px solid var(--accent-color);
 }

@@ -129,7 +129,9 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="button black">ОНЛАЙН-ЗАПИСЬ</button>
+            <button type="button" class="button black" data-modal-open>
+              ОНЛАЙН-ЗАПИСЬ
+            </button>
           </div>
         </div>
       </section>
@@ -180,7 +182,9 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="button">ОНЛАЙН-ЗАПИСЬ</button>
+          <button type="button" class="button" data-modal-open>
+            ОНЛАЙН-ЗАПИСЬ
+          </button>
         </div>
       </section>
 
@@ -471,7 +475,41 @@
 
           <section class="note">
             <h2 class="note-title title">Онлайн-запись</h2>
-            <button type="button" class="button">ОНЛАЙН-ЗАПИСЬ</button>
+            <form class="online-form">
+              <div class="online-form__field">
+                <input
+                  type="text"
+                  class="online-form__input"
+                  name="online-name"
+                  id="online-name"
+                  placeholder=" "
+                />
+                <label for="online-name" class="online-form__label">Имя*</label>
+              </div>
+              <div class="online-form__field">
+                <input
+                  type="tel"
+                  class="online-form__input"
+                  name="online-tel"
+                  id="online-tel"
+                  placeholder=" "
+                />
+                <label for="online-tel" class="online-form__label"
+                  >Телефон*</label
+                >
+              </div>
+              <div class="text__field">
+                <textarea
+                  name="online-text"
+                  id="online-text"
+                  class="online-form__textarea"
+                ></textarea>
+                <label for="online-text" class="online-form__label"
+                  >сообщение</label
+                >
+              </div>
+            </form>
+            <button type="button" class="button">отправить</button>
           </section>
 
           <!-- Контакты -->
@@ -545,6 +583,147 @@
             <use href="./images/icons.svg#vector"></use>
           </svg>
         </button>
+        <p class="modal-title">Онлайн запись</p>
+        <form class="form">
+          <div class="form-field">
+            <label for="user-name" class="form-label">Имя </label>
+            <div class="input-wrap">
+              <input
+                type="text"
+                id="user-name"
+                class="form-input"
+                name="user-name"
+                placeholder="Ваше имя"
+                required
+                minlength="2"
+                maxlength="20"
+              />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#name"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone" class="form-label">Телефон</label>
+            <div class="input-wrap">
+              <input
+                type="tel"
+                class="form-input"
+                name="phone"
+                id="phone"
+                placeholder="Телефон"
+                required
+                title="+380 (63) 754-47-83"
+                value="+380"
+                minlength="13"
+              />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </div>
+          </div>
+          <!-- <div class="form-field">
+            <label for="email" class="form-label">Почта</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                class="form-input"
+                name="user-password"
+                placeholder="Почта"
+                required
+                id="email"
+              />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/icons.svg#mail"></use>
+              </svg>
+            </div>
+          </div> -->
+          <!-- <div class="form-field">
+            <label for="user-text">Примечание</label>
+            <textarea
+              name=""
+              id="user-text"
+              class="form-text"
+              placeholder="Введите текст"
+            ></textarea>
+          </div> -->
+          <fieldset>
+            <legend>Мастер</legend>
+            <label for="John Smith">John Smith</label>
+            <input
+              type="radio"
+              id="John Smith"
+              name="master"
+              value="John Smith"
+            />
+            <label for="Michele Doe">Michele Doe</label>
+            <input
+              type="radio"
+              id="Michele Doe"
+              name="master"
+              value="Michele Doe"
+            />
+            <label for="Alan Black">Alan Black</label>
+            <input
+              type="radio"
+              id="Alan Black"
+              name="master"
+              value="Alan Black"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Услуги</legend>
+            <label for="Мужская стрижка">Мужская стрижка</label>
+            <input
+              type="checkbox"
+              id="Мужская стрижка"
+              name="price"
+              value="Мужская стрижка"
+            />
+            <label for="Стрижка бороды">Стрижка бороды</label>
+            <input
+              type="checkbox"
+              id="Стрижка бороды"
+              name="price"
+              value="Стрижка бороды"
+            />
+            <label for="Стрижка усов">Стрижка усов</label>
+            <input
+              type="checkbox"
+              id="Стрижка усов"
+              name="price"
+              value="Стрижка усов"
+            />
+            <label for="Бритье опасной бритвой">Бритье опасной бритвой</label>
+            <input
+              type="checkbox"
+              id="Бритье опасной бритвой"
+              name="price"
+              value="Бритье опасной бритвой"
+            />
+          </fieldset>
+          <div class="form-field">
+            <label for="user-city">Ваш город</label>
+            <select name="user-city" id="user-city" class="form-input">
+              <option value="Cherkasy">Cherkasy</option>
+              <option value="Kyiv">Kyiv</option>
+              <option value="Odessa">Odessa</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <input
+              type="checkbox"
+              class="form-check visually-hidden"
+              name="privaci"
+              id="privaci"
+              value="true"
+            />
+            <label for="privaci" class="check-text"
+              >Политика пользователя</label
+            >
+          </div>
+          <button type="submit" class="button black">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
