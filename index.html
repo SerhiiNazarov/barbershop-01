@@ -22,29 +22,29 @@
 
     <header class="header">
       <div class="container header-container">
-        <a href="index.html" class="heder-logo">
-          <svg width="66" height="56" class="header__icon">
+        <a href="index.html" class="logo header__logo">
+          <svg width="66" height="56" class="logo__icon">
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
-        <nav class="header-nav">
-          <ul class="header-list">
-            <li class="header-item">
-              <a href="#about" class="header-link">О нас</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">О нас</a>
             </li>
-            <li class="header-item">
-              <a href="#services" class="header-link">Услуги и цены</a>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Услуги и цены</a>
             </li>
-            <li class="header-item">
-              <a href="#masters" class="header-link">Мастера</a>
+            <li class="nav-item">
+              <a href="#masters" class="nav-link">Мастера</a>
             </li>
-            <li class="header-item">
-              <a href="#contacts" class="header-link">Контакты</a>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Контакты</a>
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a href="tel:+380441111111" class="header-tel">+38 044 111 11 11</a>
+        <div class="connect">
+          <a href="tel:+380441111111" class="connect-tel">+38 044 111 11 11</a>
           <button type="button" class="button" data-modal-open>
             ОНЛАЙН-ЗАПИСЬ
           </button>
@@ -57,23 +57,23 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list">
-              <li class="hero-item">
+          <div class="soc">
+            <ul class="soc-list">
+              <li class="soc-item">
                 <a
                   href=""
                   target="_blank"
                   rel="noopener nofollow noreferrer"
-                  class="hero-link"
+                  class="soc-link"
                   >Instagram</a
                 >
               </li>
-              <li class="hero-item">
+              <li class="soc-item">
                 <a
                   href=""
                   target="_blank"
                   rel="noopener nofollow noreferrer"
-                  class="hero-link"
+                  class="soc-link"
                   >Youtube
                 </a>
               </li>
@@ -81,11 +81,11 @@
           </div>
 
           <div class="hero-content">
-            <p lang="en" class="hero-pre-title top-text">
+            <p lang="en" class="hero-content__pre-title top-text">
               A hair salon for men in Kyiv
             </p>
-            <h1 lang="en" class="hero-title">BarberShop</h1>
-            <p class="hero-after-title">
+            <h1 lang="en" class="hero-content__title">BarberShop</h1>
+            <p class="hero-content__after-title">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
             </p>
@@ -97,32 +97,36 @@
 
       <section id="about" class="about">
         <div class="container">
-          <ul class="about-list">
-            <li class="about-item">
+          <ul class="pic-list">
+            <li class="pic-item">
               <img
                 src="./images/img1.jpg"
                 alt="барбер стрижет бороду"
                 width="270"
                 height="445"
+                class="pic__img"
               />
             </li>
-            <li class="about-item">
+            <li class="pic-item">
               <img
                 src="./images/img2.jpg"
                 alt="барбер делает кантик"
                 width="270"
                 height="445"
+                class="pic__img"
               />
             </li>
           </ul>
           <div class="about-content">
-            <p class="about-pre-title top-text">О НАС</p>
-            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
-            <p class="about-after-title">
+            <p class="about-content__pre-title top-text">О НАС</p>
+            <h2 class="about-content__title title">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="about-content__after-title">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="about-last-title">
+            <p class="about-content__last-title">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
@@ -227,66 +231,67 @@
 
       <section id="masters" class="masters">
         <div class="container">
-          <p class="masters-pre-title top-text">
+          <p class="masters__pre-title top-text">
             Для настоящих ценителей атмосферы
           </p>
-          <h2 class="masters-title title">Наши мастера</h2>
-          <ul class="masters-list">
-            <li class="masters-item">
+          <h2 class="masters__title title">Наши мастера</h2>
+          <ul class="card__list">
+            <li class="card__item">
               <img
                 src="./images/master1.jpg"
                 alt="Барбер стрижет клиента"
                 width="370"
                 height="346"
+                class="card__img"
               />
-              <div class="masters-content">
-                <h3 lang="en" class="masters-name">John Smith</h3>
-                <p lang="en" class="masters-description">Extreme Barber</p>
-                <ul class="masters-list-links">
-                  <li class="masters-links-item">
+              <div class="card__content">
+                <h3 lang="en" class="card__name">John Smith</h3>
+                <p lang="en" class="card__description">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#linkedin"></use>
                       </svg>
                     </a>
@@ -294,61 +299,61 @@
                 </ul>
               </div>
             </li>
-            <li class="masters-item">
+            <li class="card__item">
               <img
                 src="./images/master2.jpg"
                 alt="Барбер стрижет клиента"
                 width="370"
                 height="346"
               />
-              <div class="masters-content">
-                <h3 lang="en" class="masters-name">Michele Doe</h3>
-                <p lang="en" class="masters-description">Extreme Barber</p>
-                <ul class="masters-list-links">
-                  <li class="masters-links-item">
+              <div class="card__content">
+                <h3 lang="en" class="card__name">Michele Doe</h3>
+                <p lang="en" class="card__description">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
                       <svg width="20" height="20" class="masters-soc-icons">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#linkedin"></use>
                       </svg>
                     </a>
@@ -356,61 +361,61 @@
                 </ul>
               </div>
             </li>
-            <li class="masters-item">
+            <li class="card__item">
               <img
                 src="./images/master3.jpg"
                 alt="Барбер стрижет клиента"
                 width="370"
                 height="346"
               />
-              <div class="masters-content">
-                <h3 lang="en" class="masters-name">Alan Black</h3>
-                <p lang="en" class="masters-description">Extreme Barber</p>
-                <ul class="masters-list-links">
-                  <li class="masters-links-item">
+              <div class="card__content">
+                <h3 lang="en" class="card__name">Alan Black</h3>
+                <p lang="en" class="card__description">Extreme Barber</p>
+                <ul class="socials">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#twitter"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#facebook"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="masters-links-item">
+                  <li class="socials__item">
                     <a
                       href=""
                       target="_blank"
                       rel="noopener nofollow noreferrer"
-                      class="masters-links"
+                      class="socials__links"
                     >
-                      <svg width="20" height="20" class="masters-soc-icons">
+                      <svg width="20" height="20" class="socials__icons">
                         <use href="./images/icons.svg#linkedin"></use>
                       </svg>
                     </a>
