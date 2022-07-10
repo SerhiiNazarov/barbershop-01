@@ -1,0 +1,134 @@
+.hero {
+  background-color: $second-title-color;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url("../images/hero-bg-480-mobile.jpg");
+  background-size: 480px 580px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url("../images/hero-bg-960-mobile.jpg");
+  }
+
+  @include tablet {
+    background-image: none;
+    background-color: $main-title-color;
+  }
+}
+
+.hero .container {
+  @include tablet {
+    width: 720px;
+  }
+
+  @include desktop {
+    width: 1200px;
+  }
+}
+
+.hero-content {
+  padding: 208px 0 183px;
+
+  @include tablet {
+    flex-grow: 1;
+    padding: 280px 70px 234px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(
+        to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url("../images/hero-bg-576-tablet.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url("../images/hero-bg-1152-tablet.jpg");
+    }
+  }
+
+  @include desktop {
+    padding: 272px 96px 206px 96px;
+    flex-grow: 1;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url("../images/hero-bg-1073-desktop.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url("../images/hero-bg-2146-desktop.jpg");
+    }
+  }
+}
+
+.hero-content__pre-title {
+  margin-bottom: $typical-margin;
+}
+
+.hero-content__title {
+  margin-bottom: $typical-margin;
+
+  color: $main-title-color;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+
+  @media screen and (max-width: 343px) {
+    font-size: 40px;
+  }
+
+  @include desktop {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+}
+.hero-content__after-title {
+  max-width: 306px;
+
+  color: $third-title-color;
+
+  @include font(16px, null, 1.62, 0.02em);
+
+  @include tablet {
+    max-width: 349px;
+  }
+
+  @include desktop {
+    max-width: 400px;
+    @include font(18px, null, 1.67, null);
+  }
+}

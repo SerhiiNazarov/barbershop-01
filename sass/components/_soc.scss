@@ -1,0 +1,48 @@
+.soc {
+  display: none;
+  width: 90px;
+  align-items: flex-end;
+
+  @include tablet {
+    display: flex;
+    padding-left: 22px;
+    padding-bottom: 33px;
+  }
+}
+
+.soc-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translate(-19px);
+  transform-origin: top left;
+  display: flex;
+  align-items: center;
+}
+
+.soc-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: $second-title-color;
+  margin-right: 40px;
+}
+
+.soc-item + .soc-item {
+  margin-left: 40px;
+}
+
+.soc-link {
+  color: $second-title-color;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  transition: color 300ms linear;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  color: $accent-color;
+}

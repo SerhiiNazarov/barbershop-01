@@ -1,0 +1,50 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include tablet {
+    gap: 64px;
+  }
+
+  @include desktop {
+    gap: 30px;
+  }
+}
+
+.card__item {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.card__content {
+  padding-top: 30px;
+  padding-left: 82px;
+  padding-right: 82px;
+  padding-bottom: 0;
+}
+
+.card__name {
+  margin-bottom: 8px;
+  color: $second-title-color;
+
+  @include font(18px, null, 1.39, 0.02em);
+
+  text-align: center;
+}
+
+.card__description {
+  margin-bottom: 30px;
+  color: $accent-color;
+
+  @include font(14px, null, 1.36, 0.02em);
+  text-align: center;
+}

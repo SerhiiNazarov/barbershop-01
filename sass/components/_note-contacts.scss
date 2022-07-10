@@ -1,0 +1,52 @@
+.note-contacts {
+  width: 100%;
+  height: 1053px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg-mob-1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/contacts-bg-mob-2x.png");
+  }
+
+  @include tablet {
+    height: auto;
+    background-image: url("../images/contacts-bg-tab-1x.png");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/contacts-bg-tab-2x.png");
+    }
+  }
+
+  @include desktop {
+    max-width: 1280px;
+    background-size: calc(50% - 15px);
+    background-position: right;
+    background-image: url("../images/contacts-bg-des-1x.png");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url("../images/contacts-bg-des-2x.png");
+    }
+  }
+}
+
+.note-contacts .container {
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}

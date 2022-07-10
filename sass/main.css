@@ -1,0 +1,15 @@
+@import "./utils/_vars.scss";
+@import "./base/_allstyles.scss";
+@import "./base/_reset.scss";
+@import "./components/_header.scss";
+@import "./components/_hero.scss";
+@import "./components/_about.scss";
+@import "./components/_services.scss";
+@import "./components/_responds.scss";
+@import "./components/_masters.scss";
+@import "./components/_examples.scss";
+@import "./components/_note-contacts.scss";
+@import "./components/_note.scss";
+@import "./components/_online-form.scss";
+@import "./components/_contacts.scss";
+@import "./components/_footer.scss";

@@ -1,0 +1,20 @@
+.logo {
+  color: $main-title-color;
+
+  @include tablet {
+    color: $second-title-color;
+  }
+}
+
+.logo__icon {
+  fill: currentColor;
+  transition: color 300ms linear;
+
+  .logo:hover & {
+    color: $accent-color;
+  }
+}
+
+.header__logo {
+  margin-right: 70px;
+}

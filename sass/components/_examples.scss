@@ -1,0 +1,34 @@
+.examples {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+.examples__pre-title {
+  margin-bottom: 44px;
+}
+
+.examples__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.examples__item {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}

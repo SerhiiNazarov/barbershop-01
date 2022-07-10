@@ -1,0 +1,37 @@
+.connect {
+  display: none;
+  margin-left: auto;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+}
+
+.connect-tel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: $main-title-color;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  transition: color 300ms linear;
+
+  @include desktop {
+    margin-right: 40px;
+  }
+}
+
+.connect-tel:hover,
+.connect-tel:focus {
+  color: $accent-color;
+}

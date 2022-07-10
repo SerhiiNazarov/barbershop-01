@@ -1,0 +1,35 @@
+.nav-list {
+  display: none;
+  align-items: center;
+
+  @include tablet {
+    display: flex;
+    gap: 24px;
+  }
+
+  @include desktop {
+    gap: 40px;
+  }
+}
+
+.nav-item {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.nav-link {
+  color: $main-title-color;
+  padding: 18px 0;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  transition: color 300ms linear;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: $accent-color;
+}

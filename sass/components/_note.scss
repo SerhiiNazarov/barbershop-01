@@ -1,0 +1,29 @@
+.note {
+  width: 100%;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(50% + 15px);
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.note__title {
+  // text-align: center;
+  margin-bottom: 44px;
+
+  // @include tablet {
+  //   text-align: start;
+  // }
+}

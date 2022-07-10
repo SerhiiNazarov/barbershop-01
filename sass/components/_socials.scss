@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.socials__item + .socials__item {
+  margin-left: 10px;
+}
+
+.socials__links {
+  display: flex;
+  padding: 12px;
+  background-color: $main-title-color;
+  border-radius: 50%;
+  color: $second-title-color;
+
+  transition: color 300ms linear;
+}
+
+.socials__icons {
+  fill: currentColor;
+}
+
+.socials__links:hover,
+.socials__links:focus {
+  color: $accent-color;
+}
